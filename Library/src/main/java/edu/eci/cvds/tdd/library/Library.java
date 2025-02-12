@@ -35,10 +35,14 @@ public class Library {
      * @return true if the book was stored false otherwise.
      */
     public boolean addBook(Book book) {
-        //TODO Implement the logic to add a new book into the map.
-        return false;
+        if (book == null || book.getIsbn() == null) {
+            return false; // para que no se puedan agregar libros nulos o sin ISBN.
+        }
+        
+        books.put(book, books.getOrDefault(book, 0) + 1);
+        return true;
     }
-
+    
     /**
      * This method creates a new loan with for the User identify by the userId and the book identify by the isbn,
      * the loan should be store in the list of loans, to successfully create a loan is required to validate that the

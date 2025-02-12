@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.eci.cvds.AppTest" time="0.026" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.eci.cvds.tdd.library.LibraryTest" time="0.061" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\Daniel\Downloads\Nueva carpeta\LAB03\Library\target\test-classes;C:\Users\Daniel\Downloads\Nueva carpeta\LAB03\Library\target\classes;C:\Users\Daniel\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
+    <property name="java.class.path" value="C:\Users\Daniel\Downloads\Nueva carpeta\LAB03\Library\target\test-classes;C:\Users\Daniel\Downloads\Nueva carpeta\LAB03\Library\target\classes;C:\Users\Daniel\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\Daniel\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Daniel\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\Daniel\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Daniel\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\Daniel\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CO"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.14+7\bin"/>
-    <property name="sun.java.command" value="C:\Users\Daniel\AppData\Local\Temp\surefire12346851782465841058\surefirebooter-20250210175533406_3.jar C:\Users\Daniel\AppData\Local\Temp\surefire12346851782465841058 2025-02-10T17-55-33_131-jvmRun1 surefire-20250210175533406_1tmp surefire_0-20250210175533406_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Daniel\AppData\Local\Temp\surefire13122427955413255493\surefirebooter-20250211203946743_3.jar C:\Users\Daniel\AppData\Local\Temp\surefire13122427955413255493 2025-02-11T20-39-46_478-jvmRun1 surefire-20250211203946743_1tmp surefire_0-20250211203946743_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\Daniel\Downloads\Nueva carpeta\LAB03\Library\target\test-classes;C:\Users\Daniel\Downloads\Nueva carpeta\LAB03\Library\target\classes;C:\Users\Daniel\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\Daniel\Downloads\Nueva carpeta\LAB03\Library\target\test-classes;C:\Users\Daniel\Downloads\Nueva carpeta\LAB03\Library\target\classes;C:\Users\Daniel\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\Daniel\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Daniel\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\Daniel\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Daniel\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\Daniel\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Daniel"/>
     <property name="user.language" value="es"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Daniel\AppData\Local\Temp\surefire12346851782465841058\surefirebooter-20250210175533406_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Daniel\AppData\Local\Temp\surefire13122427955413255493\surefirebooter-20250211203946743_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.14+7"/>
@@ -58,5 +58,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testApp" classname="edu.eci.cvds.AppTest" time="0.003"/>
+  <testcase name="testAddNewBookSuccessfully" classname="edu.eci.cvds.tdd.library.LibraryTest" time="0.033"/>
+  <testcase name="testAddExistingBookIncreasesCount" classname="edu.eci.cvds.tdd.library.LibraryTest" time="0.001"/>
+  <testcase name="testAddNullBookReturnsFalse" classname="edu.eci.cvds.tdd.library.LibraryTest" time="0.002"/>
 </testsuite>
