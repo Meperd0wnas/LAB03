@@ -1,3 +1,5 @@
+package edu.eci.cvds.tdd.library;
+
 import edu.eci.cvds.tdd.library.book.Book;
 import edu.eci.cvds.tdd.library.loan.Loan;
 import edu.eci.cvds.tdd.library.loan.LoanStatus;
@@ -11,8 +13,6 @@ import java.util.List;
 import java.util.Map;
 import edu.eci.cvds.tdd.library.Library;
 
-
-import static org.junit.jupiter.api.Assertions.*;
 public class LibraryTest {
 
     @Test
@@ -90,6 +90,27 @@ public class LibraryTest {
         assertNull(secondLoan);
     }
 
+    @Test
+public void testReturnLoanShouldReturnLoanSuccessfully() {
+    Library library = new Library();
+    User user = new User("123", "John Doe");
+    Book book = new Book("Title", "Author", "ISBN123");
+    library.addUser (user);
+    library.addBook(book);
+    Loan loan = library.loanABook(user.getId(), book.getIsbn());
+    Loan returnedLoan = library.returnLoan(loan);
+    assertNotNull(returnedLoan);
+    assertEquals(LoanStatus.RETURNED, returnedLoan.getStatus());
+    assertNotNull(returnedLoan.getReturnDate());
+}
+
+@Test
+public void testReturnLoanShouldntReturnNonExistentLoan() {
+    Library library = new Library();
+    Loan nonExistentLoan = new Loan();
+    Loan returnedLoan = library.returnLoan(nonExistentLoan);
+    assertNull(returnedLoan);
+}
 
 }
 
