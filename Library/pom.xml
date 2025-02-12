@@ -16,6 +16,13 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.jupiter.version>5.8.1</junit.jupiter.version>
+		<sonar.projectKey>library</sonar.projectKey>
+		<sonar.projectName>library</sonar.projectName> 
+		<sonar.host.url>http://localhost:9000</sonar.host.url>
+		<sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+		<sonar.coverage.exclusions>src//configurators/*</sonar.coverage.exclusions>
+	
+
     </properties>
 
     <dependencies>
@@ -92,6 +99,14 @@
           </execution>
         </executions>
       </plugin>
+<<<<<<< HEAD
+	  <plugin>
+			<groupId>org.sonarsource.scanner.maven</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>4.0.0.4121</version>
+		</plugin>
+=======
+>>>>>>> 864f23f38e2e30cd3a5782c01dd02d1b53835a76
         </plugins>
     </build>
 

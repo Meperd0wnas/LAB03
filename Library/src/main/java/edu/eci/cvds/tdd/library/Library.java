@@ -114,4 +114,7 @@ public class Library {
         return users.add(user);
     }
 
+    public List<Loan> getLoans() {
+        return loans;
+    }
 }

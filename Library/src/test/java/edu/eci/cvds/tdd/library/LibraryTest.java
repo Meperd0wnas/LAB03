@@ -112,5 +112,21 @@ public void testReturnLoanShouldntReturnNonExistentLoan() {
     assertNull(returnedLoan);
 }
 
+@Test
+public void testLoanBookShouldntAllowMultipleLoansForSameUserAndBook() {
+    Library library = new Library();
+    User user = new User("123", "John Doe");
+    Book book = new Book("Title", "Author", "ISBN123");
+    library.addUser (user);
+    library.addBook(book);
+    Loan firstLoan = library.loanABook(user.getId(), book.getIsbn());
+    assertNotNull(firstLoan, "El primer préstamo debería ser exitoso.");
+    assertEquals(1, library.getLoans().size(), "Debería haber un préstamo en la lista.");
+    Loan secondLoan = library.loanABook(user.getId(), book.getIsbn());
+    assertNull(secondLoan, "El segundo préstamo no debería ser permitido, ya que el usuario ya tiene el libro prestado.");
+    assertEquals(1, library.getLoans().size(), "Debería seguir habiendo un préstamo en la lista.");
+}
+
+
 }
 
